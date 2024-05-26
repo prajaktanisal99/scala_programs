@@ -1,0 +1,1128 @@
+
+The following have been reloaded with a version change:
+  1) cpu/0.17.3b => cpu/0.15.4
+
+myHadoop: Setting MH_IPOIB_TRANSFORM='s/\([^.]*\).*$/\1.ib.cluster/' from myhadoop.conf
+myHadoop: Setting MH_SCRATCH_DIR=/scratch/$USER/job_$SLURM_JOBID from myhadoop.conf
+myHadoop: Using HADOOP_HOME=/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2
+myHadoop: Using MH_SCRATCH_DIR=/scratch/pnisal/job_30142855
+myHadoop: Using JAVA_HOME=/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/openjdk-11.0.2-k5ezeyjgjeqmehyvrmmpymaguuf2qzsk
+myHadoop: Generating Hadoop configuration in directory in /home/pnisal/expansecluster...
+myHadoop: Backing up old config dir to /home/pnisal/expansecluster.29...
+renamed '/home/pnisal/expansecluster' -> '/home/pnisal/expansecluster.29'
+cp: -r not specified; omitting directory '/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/etc/hadoop/shellprofile.d'
+myHadoop: Designating exp-4-12.ib.cluster as master node (namenode, secondary namenode, and jobtracker)
+myHadoop: The following nodes will be slaves (datanode, tasktracer):
+exp-4-12.ib.cluster
+exp-4-42.ib.cluster
+WARNING: /scratch/pnisal/job_30142855/pids does not exist. Creating.
+WARNING: /scratch/pnisal/job_30142855/logs does not exist. Creating.
+2024-04-26 12:11:57,001 INFO namenode.NameNode: STARTUP_MSG: 
+/************************************************************
+STARTUP_MSG: Starting NameNode
+STARTUP_MSG:   host = exp-4-12/198.202.103.63
+STARTUP_MSG:   args = [-format]
+STARTUP_MSG:   version = 3.2.2
+STARTUP_MSG:   classpath = /home/pnisal/expansecluster:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jettison-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/httpclient-4.5.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-common-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/gson-2.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/dnsjava-2.1.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/slf4j-api-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/hadoop-auth-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-compress-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsr311-api-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/guava-27.0-jre.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-xdr-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsp-api-2.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-math3-3.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/snappy-java-1.0.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/javax.servlet-api-3.1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-server-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/nimbus-jose-jwt-7.9.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-server-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/accessors-smart-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-admin-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/checker-qual-2.5.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-net-3.6.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/failureaccess-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/error_prone_annotations-2.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/slf4j-log4j12-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-pkix-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-json-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-webapp-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-config-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/asm-5.0.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/hadoop-annotations-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsch-0.1.55.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerby-asn1-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/zookeeper-3.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-util-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-client-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-crypto-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-databind-2.9.10.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jaxb-api-2.2.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/woodstox-core-5.0.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-logging-1.1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/paranamer-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/re2j-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/json-smart-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/stax2-api-3.1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-framework-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/audience-annotations-0.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-text-1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/animal-sniffer-annotations-1.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/j2objc-annotations-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-cli-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/curator-recipes-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-identity-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-client-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/httpcore-4.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/metrics-core-3.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-io-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-configuration2-2.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/javax.activation-api-1.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jul-to-slf4j-1.7.25.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-security-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/log4j-1.2.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jsr305-3.0.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/netty-3.10.6.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-xml-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/token-provider-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/htrace-core4-4.1.0-incubating.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-core-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-servlet-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-core-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-simplekdc-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jetty-http-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-io-2.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jersey-servlet-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-core-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-codec-1.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-collections-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/jcip-annotations-1.0-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-beanutils-1.9.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/kerb-server-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/commons-lang3-3.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/lib/avro-1.7.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-kms-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-nfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/common/hadoop-common-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jettison-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-util-ajax-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/httpclient-4.5.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-common-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/gson-2.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/okhttp-2.7.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/dnsjava-2.1.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/hadoop-auth-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-compress-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsr311-api-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/netty-all-4.1.48.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/okio-1.6.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/guava-27.0-jre.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-xdr-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-math3-3.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/snappy-java-1.0.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/javax.servlet-api-3.1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-server-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-xc-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-jaxrs-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/nimbus-jose-jwt-7.9.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-server-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/accessors-smart-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-admin-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/checker-qual-2.5.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-net-3.6.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/failureaccess-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/error_prone_annotations-2.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-pkix-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-json-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-webapp-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-config-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/asm-5.0.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/hadoop-annotations-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsch-0.1.55.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerby-asn1-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jaxb-impl-2.2.3-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/zookeeper-3.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-util-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-client-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-crypto-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-databind-2.9.10.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jaxb-api-2.2.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/woodstox-core-5.0.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/paranamer-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/re2j-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/json-smart-2.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/stax2-api-3.1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-framework-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/audience-annotations-0.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-text-1.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/animal-sniffer-annotations-1.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/j2objc-annotations-1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/curator-recipes-2.13.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-identity-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-client-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/httpcore-4.4.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-io-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-configuration2-2.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/javax.activation-api-1.2.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-security-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jsr305-3.0.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/netty-3.10.6.Final.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-xml-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/token-provider-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/htrace-core4-4.1.0-incubating.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-core-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-servlet-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-core-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/json-simple-1.1.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-simplekdc-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-util-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jetty-http-9.4.20.v20190813.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-io-2.5.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jersey-servlet-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-core-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-codec-1.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-collections-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/jcip-annotations-1.0-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-beanutils-1.9.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/kerb-server-1.0.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/commons-lang3-3.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/lib/avro-1.7.7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-nfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-rbf-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-client-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-httpfs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/hdfs/hadoop-hdfs-native-client-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/lib/junit-4.11.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-3.2.2-tests.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-nativetask-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-app-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-uploader-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/mapreduce/hadoop-mapreduce-client-core-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/java-util-1.9.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-module-jaxb-annotations-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/geronimo-jcache_1.0_spec-1.0-alpha-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/guice-servlet-4.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jersey-client-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/bcpkix-jdk15on-1.60.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/mssql-jdbc-6.2.1.jre7.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-base-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/ehcache-3.3.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/json-io-2.5.1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/objenesis-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/fst-2.50.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/snakeyaml-1.16.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/bcprov-jdk15on-1.60.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/guice-4.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/metrics-core-3.2.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jersey-guice-1.19.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/jackson-jaxrs-json-provider-2.9.10.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/HikariCP-java7-2.4.12.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/javax.inject-1.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/swagger-annotations-1.5.4.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/lib/aopalliance-1.0.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-services-core-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-nodemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-client-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-api-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-services-api-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-common-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-timeline-pluginstorage-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-registry-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-router-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-tests-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-submarine-3.2.2.jar:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/hadoop/3.2.2/share/hadoop/yarn/hadoop-yarn-server-web-proxy-3.2.2.jar
+STARTUP_MSG:   build = Unknown -r 7a3bc90b05f257c8ace2f76d74264906f0f7a932; compiled by 'hexiaoqiao' on 2021-01-03T09:26Z
+STARTUP_MSG:   java = 11.0.2
+************************************************************/
+2024-04-26 12:11:57,009 INFO namenode.NameNode: registered UNIX signal handlers for [TERM, HUP, INT]
+2024-04-26 12:11:57,070 INFO namenode.NameNode: createNameNode [-format]
+2024-04-26 12:11:57,402 INFO common.Util: Assuming 'file' scheme for path /scratch/pnisal/job_30142855/namenode_data in configuration.
+2024-04-26 12:11:57,403 INFO common.Util: Assuming 'file' scheme for path /scratch/pnisal/job_30142855/namenode_data in configuration.
+Formatting using clusterid: CID-3cb377e7-5375-4cb2-9f55-ab8f78722637
+2024-04-26 12:11:57,434 INFO namenode.FSEditLog: Edit logging is async:true
+2024-04-26 12:11:57,454 INFO namenode.FSNamesystem: KeyProvider: null
+2024-04-26 12:11:57,455 INFO namenode.FSNamesystem: fsLock is fair: true
+2024-04-26 12:11:57,455 INFO namenode.FSNamesystem: Detailed lock hold time metrics enabled: false
+2024-04-26 12:11:57,492 INFO namenode.FSNamesystem: fsOwner             = pnisal (auth:SIMPLE)
+2024-04-26 12:11:57,492 INFO namenode.FSNamesystem: supergroup          = supergroup
+2024-04-26 12:11:57,492 INFO namenode.FSNamesystem: isPermissionEnabled = true
+2024-04-26 12:11:57,492 INFO namenode.FSNamesystem: HA Enabled: false
+2024-04-26 12:11:57,617 INFO common.Util: dfs.datanode.fileio.profiling.sampling.percentage set to 0. Disabling file IO profiling
+2024-04-26 12:11:57,624 INFO blockmanagement.DatanodeManager: dfs.block.invalidate.limit: configured=1000, counted=60, effected=1000
+2024-04-26 12:11:57,624 INFO blockmanagement.DatanodeManager: dfs.namenode.datanode.registration.ip-hostname-check=true
+2024-04-26 12:11:57,627 INFO blockmanagement.BlockManager: dfs.namenode.startup.delay.block.deletion.sec is set to 000:00:00:00.000
+2024-04-26 12:11:57,627 INFO blockmanagement.BlockManager: The block deletion will start around 2024 Apr 26 12:11:57
+2024-04-26 12:11:57,628 INFO util.GSet: Computing capacity for map BlocksMap
+2024-04-26 12:11:57,628 INFO util.GSet: VM type       = 64-bit
+2024-04-26 12:11:57,629 INFO util.GSet: 2.0% max memory 30.0 GB = 613.8 MB
+2024-04-26 12:11:57,629 INFO util.GSet: capacity      = 2^26 = 67108864 entries
+2024-04-26 12:11:57,661 INFO blockmanagement.BlockManager: Storage policy satisfier is disabled
+2024-04-26 12:11:57,662 INFO blockmanagement.BlockManager: dfs.block.access.token.enable = false
+2024-04-26 12:11:57,666 INFO Configuration.deprecation: No unit for dfs.namenode.safemode.extension(30000) assuming MILLISECONDS
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.threshold-pct = 0.9990000128746033
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.min.datanodes = 0
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManagerSafeMode: dfs.namenode.safemode.extension = 30000
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: defaultReplication         = 3
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: maxReplication             = 512
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: minReplication             = 1
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: maxReplicationStreams      = 2
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: redundancyRecheckInterval  = 3000ms
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: encryptDataTransfer        = false
+2024-04-26 12:11:57,666 INFO blockmanagement.BlockManager: maxNumBlocksToLog          = 1000
+2024-04-26 12:11:57,683 INFO namenode.FSDirectory: GLOBAL serial map: bits=29 maxEntries=536870911
+2024-04-26 12:11:57,683 INFO namenode.FSDirectory: USER serial map: bits=24 maxEntries=16777215
+2024-04-26 12:11:57,683 INFO namenode.FSDirectory: GROUP serial map: bits=24 maxEntries=16777215
+2024-04-26 12:11:57,683 INFO namenode.FSDirectory: XATTR serial map: bits=24 maxEntries=16777215
+2024-04-26 12:11:57,692 INFO util.GSet: Computing capacity for map INodeMap
+2024-04-26 12:11:57,692 INFO util.GSet: VM type       = 64-bit
+2024-04-26 12:11:57,692 INFO util.GSet: 1.0% max memory 30.0 GB = 306.9 MB
+2024-04-26 12:11:57,693 INFO util.GSet: capacity      = 2^25 = 33554432 entries
+2024-04-26 12:11:57,706 INFO namenode.FSDirectory: ACLs enabled? false
+2024-04-26 12:11:57,706 INFO namenode.FSDirectory: POSIX ACL inheritance enabled? true
+2024-04-26 12:11:57,706 INFO namenode.FSDirectory: XAttrs enabled? true
+2024-04-26 12:11:57,706 INFO namenode.NameNode: Caching file names occurring more than 10 times
+2024-04-26 12:11:57,711 INFO snapshot.SnapshotManager: Loaded config captureOpenFiles: false, skipCaptureAccessTimeOnlyChange: false, snapshotDiffAllowSnapRootDescendant: true, maxSnapshotLimit: 65536
+2024-04-26 12:11:57,713 INFO snapshot.SnapshotManager: SkipList is disabled
+2024-04-26 12:11:57,716 INFO util.GSet: Computing capacity for map cachedBlocks
+2024-04-26 12:11:57,716 INFO util.GSet: VM type       = 64-bit
+2024-04-26 12:11:57,717 INFO util.GSet: 0.25% max memory 30.0 GB = 76.7 MB
+2024-04-26 12:11:57,717 INFO util.GSet: capacity      = 2^23 = 8388608 entries
+2024-04-26 12:11:57,728 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.window.num.buckets = 10
+2024-04-26 12:11:57,728 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.num.users = 10
+2024-04-26 12:11:57,728 INFO metrics.TopMetrics: NNTop conf: dfs.namenode.top.windows.minutes = 1,5,25
+2024-04-26 12:11:57,731 INFO namenode.FSNamesystem: Retry cache on namenode is enabled
+2024-04-26 12:11:57,731 INFO namenode.FSNamesystem: Retry cache will use 0.03 of total heap and retry cache entry expiry time is 600000 millis
+2024-04-26 12:11:57,732 INFO util.GSet: Computing capacity for map NameNodeRetryCache
+2024-04-26 12:11:57,732 INFO util.GSet: VM type       = 64-bit
+2024-04-26 12:11:57,732 INFO util.GSet: 0.029999999329447746% max memory 30.0 GB = 9.2 MB
+2024-04-26 12:11:57,732 INFO util.GSet: capacity      = 2^20 = 1048576 entries
+2024-04-26 12:11:57,750 INFO namenode.FSImage: Allocated new BlockPoolId: BP-247206272-198.202.103.63-1714158717745
+2024-04-26 12:11:57,762 INFO common.Storage: Storage directory /scratch/pnisal/job_30142855/namenode_data has been successfully formatted.
+2024-04-26 12:11:57,789 INFO namenode.FSImageFormatProtobuf: Saving image file /scratch/pnisal/job_30142855/namenode_data/current/fsimage.ckpt_0000000000000000000 using no compression
+2024-04-26 12:11:57,878 INFO namenode.FSImageFormatProtobuf: Image file /scratch/pnisal/job_30142855/namenode_data/current/fsimage.ckpt_0000000000000000000 of size 401 bytes saved in 0 seconds .
+2024-04-26 12:11:57,891 INFO namenode.NNStorageRetentionManager: Going to retain 1 images with txid >= 0
+2024-04-26 12:11:57,894 INFO namenode.FSImage: FSImageSaver clean checkpoint: txid=0 when meet shutdown.
+2024-04-26 12:11:57,895 INFO namenode.NameNode: SHUTDOWN_MSG: 
+/************************************************************
+SHUTDOWN_MSG: Shutting down NameNode at exp-4-12/198.202.103.63
+************************************************************/
+myHadoop:  
+myHadoop: Enabling experimental Spark support
+myHadoop: Using SPARK_CONF_DIR=/home/pnisal/expansecluster/spark
+myHadoop:  
+To use Spark, you will want to type the following commands:"
+  source /home/pnisal/expansecluster/spark/spark-env.sh
+  myspark start
+Starting namenodes on [exp-4-12.ib.cluster]
+Starting datanodes
+WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+localhost: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+localhost: @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+localhost: @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+localhost: IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+localhost: Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+localhost: It is also possible that a host key has just been changed.
+localhost: The fingerprint for the ED25519 key sent by the remote host is
+localhost: SHA256:xVepKeXMAJwCToj1rH+1tDc8o5A9DlSj5vgVQ3pliqQ.
+localhost: Please contact your system administrator.
+localhost: Add correct host key in /home/pnisal/.ssh/known_hosts to get rid of this message.
+localhost: Offending ED25519 key in /home/pnisal/.ssh/known_hosts:1
+localhost: Password authentication is disabled to avoid man-in-the-middle attacks.
+localhost: Keyboard-interactive authentication is disabled to avoid man-in-the-middle attacks.
+localhost: WARNING: HADOOP_SECURE_DN_PID_DIR has been replaced by HADOOP_SECURE_PID_DIR. Using value of HADOOP_SECURE_DN_PID_DIR.
+Starting secondary namenodes [exp-4-12.ib.cluster]
+mySpark: Using /home/pnisal/expansecluster/spark/slaves as our slaves file
+mySpark: Reading in /home/pnisal/expansecluster/spark/spark-env.sh as our slaves file
+starting org.apache.spark.deploy.master.Master, logging to /scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.master.Master-1-exp-4-12.out
+mySpark: Starting worker on exp-4-12.ib.cluster:
+  /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/spark-3.2.1-bin-hadoop3.2/sbin/spark-daemon.sh --config /home/pnisal/expansecluster/spark start org.apache.spark.deploy.worker.Worker 1 spark://exp-4-12.ib.cluster:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-12.out
+mySpark: Starting worker on exp-4-42.ib.cluster:
+  /cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/spark-3.2.1-bin-hadoop3.2/sbin/spark-daemon.sh --config /home/pnisal/expansecluster/spark start org.apache.spark.deploy.worker.Worker 1 spark://exp-4-12.ib.cluster:7077
+starting org.apache.spark.deploy.worker.Worker, logging to /scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-42.out
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.apache.spark.unsafe.Platform (file:/cm/shared/apps/spack/cpu/opt/spack/linux-centos8-zen/gcc-8.3.1/spark-3.2.1-bin-hadoop3.2/jars/spark-unsafe_2.12-3.2.1.jar) to constructor java.nio.DirectByteBuffer(long,int)
+WARNING: Please consider reporting this to the maintainers of org.apache.spark.unsafe.Platform
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+2024-04-26 12:12:40,484 INFO spark.SparkContext: Running Spark version 3.2.1
+2024-04-26 12:12:40,538 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2024-04-26 12:12:40,634 INFO resource.ResourceUtils: ==============================================================
+2024-04-26 12:12:40,634 INFO resource.ResourceUtils: No custom resources configured for spark.driver.
+2024-04-26 12:12:40,635 INFO resource.ResourceUtils: ==============================================================
+2024-04-26 12:12:40,635 INFO spark.SparkContext: Submitted application: Trip
+2024-04-26 12:12:40,652 INFO resource.ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 12, script: , vendor: , memory -> name: memory, amount: 24576, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+2024-04-26 12:12:40,675 INFO resource.ResourceProfile: Limiting resource is cpus at 12 tasks per executor
+2024-04-26 12:12:40,677 INFO resource.ResourceProfileManager: Added ResourceProfile id: 0
+2024-04-26 12:12:40,715 INFO spark.SecurityManager: Changing view acls to: pnisal
+2024-04-26 12:12:40,715 INFO spark.SecurityManager: Changing modify acls to: pnisal
+2024-04-26 12:12:40,716 INFO spark.SecurityManager: Changing view acls groups to: 
+2024-04-26 12:12:40,716 INFO spark.SecurityManager: Changing modify acls groups to: 
+2024-04-26 12:12:40,716 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(pnisal); groups with view permissions: Set(); users  with modify permissions: Set(pnisal); groups with modify permissions: Set()
+2024-04-26 12:12:40,967 INFO util.Utils: Successfully started service 'sparkDriver' on port 45205.
+2024-04-26 12:12:40,996 INFO spark.SparkEnv: Registering MapOutputTracker
+2024-04-26 12:12:41,020 INFO spark.SparkEnv: Registering BlockManagerMaster
+2024-04-26 12:12:41,033 INFO storage.BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2024-04-26 12:12:41,033 INFO storage.BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+2024-04-26 12:12:41,038 INFO spark.SparkEnv: Registering BlockManagerMasterHeartbeat
+2024-04-26 12:12:41,059 INFO storage.DiskBlockManager: Created local directory at /scratch/pnisal/job_30142855/blockmgr-e456ca87-fcf4-4617-a373-f8dadbb2d387
+2024-04-26 12:12:41,087 INFO memory.MemoryStore: MemoryStore started with capacity 14.2 GiB
+2024-04-26 12:12:41,099 INFO spark.SparkEnv: Registering OutputCommitCoordinator
+2024-04-26 12:12:41,189 INFO util.log: Logging initialized @1869ms to org.sparkproject.jetty.util.log.Slf4jLog
+2024-04-26 12:12:41,236 INFO server.Server: jetty-9.4.43.v20210629; built: 2021-06-30T11:07:22.254Z; git: 526006ecfa3af7f1a27ef3a288e2bef7ea9dd7e8; jvm 11.0.2+9
+2024-04-26 12:12:41,251 INFO server.Server: Started @1931ms
+2024-04-26 12:12:41,281 INFO server.AbstractConnector: Started ServerConnector@38f7611a{HTTP/1.1, (http/1.1)}{exp-4-12.ib.cluster:4040}
+2024-04-26 12:12:41,281 INFO util.Utils: Successfully started service 'SparkUI' on port 4040.
+2024-04-26 12:12:41,297 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@53830483{/jobs,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,299 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2620e717{/jobs/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,299 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@7636823f{/jobs/job,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,302 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@2b10ace9{/jobs/job/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,303 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3eda0aeb{/stages,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,303 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6b4283c4{/stages/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,304 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@636bbbbb{/stages/stage,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,305 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@11a8042c{/stages/stage/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,306 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@69391e08{/stages/pool,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,307 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64b3b1ce{/stages/pool/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,307 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@49ec6a9f{/storage,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,308 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5f7da3d3{/storage/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,309 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@3a22bad6{/storage/rdd,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,309 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@64fe9da7{/storage/rdd/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,310 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5f172d4a{/environment,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,311 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@67efd2c2{/environment/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,311 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@17c2d509{/executors,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,312 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1a0b5323{/executors/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,312 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@245ec1a6{/executors/threadDump,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,315 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@38792286{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,321 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@665522c2{/static,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,322 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@23a5818e{/,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,323 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@9fc9f91{/api,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,323 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6850b758{/jobs/job/kill,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,324 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@704641e3{/stages/stage/kill,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,325 INFO ui.SparkUI: Bound SparkUI to exp-4-12.ib.cluster, and started at http://exp-4-12.ib.cluster:4040
+2024-04-26 12:12:41,338 INFO spark.SparkContext: Added JAR file:/home/pnisal/project7/trip.jar at spark://exp-4-12.ib.cluster:45205/jars/trip.jar with timestamp 1714158760477
+2024-04-26 12:12:41,507 INFO client.StandaloneAppClient$ClientEndpoint: Connecting to master spark://exp-4-12.ib.cluster:7077...
+2024-04-26 12:12:41,552 INFO client.TransportClientFactory: Successfully created connection to exp-4-12.ib.cluster/10.22.4.12:7077 after 26 ms (0 ms spent in bootstraps)
+2024-04-26 12:12:41,670 INFO cluster.StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20240426121241-0000
+2024-04-26 12:12:41,677 INFO util.Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 35025.
+2024-04-26 12:12:41,678 INFO netty.NettyBlockTransferService: Server created on exp-4-12.ib.cluster:35025
+2024-04-26 12:12:41,679 INFO storage.BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2024-04-26 12:12:41,682 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/0 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,684 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/0 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,685 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/1 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,685 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/1 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,685 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/2 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,685 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/2 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,686 INFO storage.BlockManagerMaster: Registering BlockManager BlockManagerId(driver, exp-4-12.ib.cluster, 35025, None)
+2024-04-26 12:12:41,686 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/3 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,686 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/3 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,686 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/4 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,687 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/4 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,687 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/5 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,687 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/5 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,687 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/6 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,687 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/6 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,688 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/7 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,688 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/7 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,689 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/8 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,689 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/8 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,689 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/9 on worker-20240426121220-10.22.4.42-44119 (10.22.4.42:44119) with 12 core(s)
+2024-04-26 12:12:41,689 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/9 on hostPort 10.22.4.42:44119 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,690 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/10 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,690 INFO storage.BlockManagerMasterEndpoint: Registering block manager exp-4-12.ib.cluster:35025 with 14.2 GiB RAM, BlockManagerId(driver, exp-4-12.ib.cluster, 35025, None)
+2024-04-26 12:12:41,690 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/10 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,690 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/11 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,691 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/11 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,691 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/12 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,691 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/12 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,691 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/13 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,691 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/13 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,692 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/14 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,692 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/14 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,693 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/15 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,693 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/15 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,693 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/16 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,693 INFO storage.BlockManagerMaster: Registered BlockManager BlockManagerId(driver, exp-4-12.ib.cluster, 35025, None)
+2024-04-26 12:12:41,693 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/16 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,693 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/17 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,693 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/17 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,694 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/18 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,694 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/18 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,694 INFO client.StandaloneAppClient$ClientEndpoint: Executor added: app-20240426121241-0000/19 on worker-20240426121216-10.22.4.12-46843 (10.22.4.12:46843) with 12 core(s)
+2024-04-26 12:12:41,694 INFO storage.BlockManager: Initialized BlockManager: BlockManagerId(driver, exp-4-12.ib.cluster, 35025, None)
+2024-04-26 12:12:41,694 INFO cluster.StandaloneSchedulerBackend: Granted executor ID app-20240426121241-0000/19 on hostPort 10.22.4.12:46843 with 12 core(s), 24.0 GiB RAM
+2024-04-26 12:12:41,805 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@751ae8a4{/metrics/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:41,834 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/6 is now RUNNING
+2024-04-26 12:12:41,834 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/0 is now RUNNING
+2024-04-26 12:12:41,838 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/9 is now RUNNING
+2024-04-26 12:12:41,842 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/5 is now RUNNING
+2024-04-26 12:12:41,843 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/7 is now RUNNING
+2024-04-26 12:12:41,845 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/8 is now RUNNING
+2024-04-26 12:12:41,846 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/2 is now RUNNING
+2024-04-26 12:12:41,847 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/1 is now RUNNING
+2024-04-26 12:12:41,848 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/3 is now RUNNING
+2024-04-26 12:12:41,849 INFO cluster.StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+2024-04-26 12:12:41,849 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/4 is now RUNNING
+2024-04-26 12:12:41,850 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/17 is now RUNNING
+2024-04-26 12:12:41,851 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/11 is now RUNNING
+2024-04-26 12:12:41,852 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/19 is now RUNNING
+2024-04-26 12:12:41,852 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/13 is now RUNNING
+2024-04-26 12:12:41,853 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/10 is now RUNNING
+2024-04-26 12:12:41,855 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/16 is now RUNNING
+2024-04-26 12:12:41,855 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/14 is now RUNNING
+2024-04-26 12:12:41,857 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/15 is now RUNNING
+2024-04-26 12:12:41,858 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/18 is now RUNNING
+2024-04-26 12:12:41,858 INFO client.StandaloneAppClient$ClientEndpoint: Executor updated: app-20240426121241-0000/12 is now RUNNING
+2024-04-26 12:12:42,330 INFO memory.MemoryStore: Block broadcast_0 stored as values in memory (estimated size 221.4 KiB, free 14.2 GiB)
+2024-04-26 12:12:42,393 INFO memory.MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.4 KiB, free 14.2 GiB)
+2024-04-26 12:12:42,395 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:42,398 INFO spark.SparkContext: Created broadcast 0 from textFile at Trip.scala:15
+2024-04-26 12:12:43,585 INFO internal.SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir.
+2024-04-26 12:12:43,593 INFO internal.SharedState: Warehouse path is 'file:/home/pnisal/project7/spark-warehouse'.
+2024-04-26 12:12:43,616 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@1efcba00{/SQL,null,AVAILABLE,@Spark}
+2024-04-26 12:12:43,616 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@569a26ab{/SQL/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:43,617 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@6cde0c69{/SQL/execution,null,AVAILABLE,@Spark}
+2024-04-26 12:12:43,618 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@22361e23{/SQL/execution/json,null,AVAILABLE,@Spark}
+2024-04-26 12:12:43,621 INFO handler.ContextHandler: Started o.s.j.s.ServletContextHandler@5855b0ed{/static/sql,null,AVAILABLE,@Spark}
+2024-04-26 12:12:43,725 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39002) with ID 0,  ResourceProfileId 0
+2024-04-26 12:12:43,830 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:45809 with 14.2 GiB RAM, BlockManagerId(0, 10.22.4.42, 45809, None)
+2024-04-26 12:12:43,875 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54702) with ID 16,  ResourceProfileId 0
+2024-04-26 12:12:43,942 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39100) with ID 1,  ResourceProfileId 0
+2024-04-26 12:12:43,942 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39098) with ID 5,  ResourceProfileId 0
+2024-04-26 12:12:43,955 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39116) with ID 9,  ResourceProfileId 0
+2024-04-26 12:12:43,962 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54792) with ID 14,  ResourceProfileId 0
+2024-04-26 12:12:43,963 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39130) with ID 3,  ResourceProfileId 0
+2024-04-26 12:12:43,974 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39136) with ID 7,  ResourceProfileId 0
+2024-04-26 12:12:43,979 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39148) with ID 4,  ResourceProfileId 0
+2024-04-26 12:12:43,982 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39144) with ID 6,  ResourceProfileId 0
+2024-04-26 12:12:43,993 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39154) with ID 8,  ResourceProfileId 0
+2024-04-26 12:12:43,993 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:33397 with 14.2 GiB RAM, BlockManagerId(16, 10.22.4.12, 33397, None)
+2024-04-26 12:12:44,000 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.42:39166) with ID 2,  ResourceProfileId 0
+2024-04-26 12:12:44,019 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54796) with ID 13,  ResourceProfileId 0
+2024-04-26 12:12:44,026 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54798) with ID 17,  ResourceProfileId 0
+2024-04-26 12:12:44,029 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54804) with ID 15,  ResourceProfileId 0
+2024-04-26 12:12:44,039 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54810) with ID 19,  ResourceProfileId 0
+2024-04-26 12:12:44,044 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:37049 with 14.2 GiB RAM, BlockManagerId(1, 10.22.4.42, 37049, None)
+2024-04-26 12:12:44,054 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:34039 with 14.2 GiB RAM, BlockManagerId(5, 10.22.4.42, 34039, None)
+2024-04-26 12:12:44,058 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54826) with ID 11,  ResourceProfileId 0
+2024-04-26 12:12:44,063 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:44557 with 14.2 GiB RAM, BlockManagerId(9, 10.22.4.42, 44557, None)
+2024-04-26 12:12:44,065 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:42131 with 14.2 GiB RAM, BlockManagerId(3, 10.22.4.42, 42131, None)
+2024-04-26 12:12:44,068 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54836) with ID 10,  ResourceProfileId 0
+2024-04-26 12:12:44,069 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54852) with ID 18,  ResourceProfileId 0
+2024-04-26 12:12:44,070 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (10.22.4.12:54856) with ID 12,  ResourceProfileId 0
+2024-04-26 12:12:44,071 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:40163 with 14.2 GiB RAM, BlockManagerId(14, 10.22.4.12, 40163, None)
+2024-04-26 12:12:44,075 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:46033 with 14.2 GiB RAM, BlockManagerId(7, 10.22.4.42, 46033, None)
+2024-04-26 12:12:44,079 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:39553 with 14.2 GiB RAM, BlockManagerId(6, 10.22.4.42, 39553, None)
+2024-04-26 12:12:44,081 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:34109 with 14.2 GiB RAM, BlockManagerId(4, 10.22.4.42, 34109, None)
+2024-04-26 12:12:44,090 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:38771 with 14.2 GiB RAM, BlockManagerId(8, 10.22.4.42, 38771, None)
+2024-04-26 12:12:44,102 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.42:44831 with 14.2 GiB RAM, BlockManagerId(2, 10.22.4.42, 44831, None)
+2024-04-26 12:12:44,123 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:46847 with 14.2 GiB RAM, BlockManagerId(17, 10.22.4.12, 46847, None)
+2024-04-26 12:12:44,126 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:34495 with 14.2 GiB RAM, BlockManagerId(15, 10.22.4.12, 34495, None)
+2024-04-26 12:12:44,129 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:47007 with 14.2 GiB RAM, BlockManagerId(13, 10.22.4.12, 47007, None)
+2024-04-26 12:12:44,141 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:46359 with 14.2 GiB RAM, BlockManagerId(19, 10.22.4.12, 46359, None)
+2024-04-26 12:12:44,159 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:45299 with 14.2 GiB RAM, BlockManagerId(11, 10.22.4.12, 45299, None)
+2024-04-26 12:12:44,165 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:37375 with 14.2 GiB RAM, BlockManagerId(12, 10.22.4.12, 37375, None)
+2024-04-26 12:12:44,166 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:33411 with 14.2 GiB RAM, BlockManagerId(18, 10.22.4.12, 33411, None)
+2024-04-26 12:12:44,169 INFO storage.BlockManagerMasterEndpoint: Registering block manager 10.22.4.12:43151 with 14.2 GiB RAM, BlockManagerId(10, 10.22.4.12, 43151, None)
+2024-04-26 12:12:45,597 INFO codegen.CodeGenerator: Code generated in 194.294273 ms
+2024-04-26 12:12:46,114 INFO mapred.FileInputFormat: Total input files to process : 4
+2024-04-26 12:12:46,138 INFO scheduler.DAGScheduler: Registering RDD 5 (collect at Trip.scala:35) as input to shuffle 0
+2024-04-26 12:12:46,142 INFO scheduler.DAGScheduler: Got map stage job 0 (collect at Trip.scala:35) with 57 output partitions
+2024-04-26 12:12:46,142 INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 0 (collect at Trip.scala:35)
+2024-04-26 12:12:46,142 INFO scheduler.DAGScheduler: Parents of final stage: List()
+2024-04-26 12:12:46,143 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:46,146 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at collect at Trip.scala:35), which has no missing parents
+2024-04-26 12:12:46,180 INFO memory.MemoryStore: Block broadcast_1 stored as values in memory (estimated size 39.1 KiB, free 14.2 GiB)
+2024-04-26 12:12:46,184 INFO memory.MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 17.9 KiB, free 14.2 GiB)
+2024-04-26 12:12:46,184 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,185 INFO spark.SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:46,198 INFO scheduler.DAGScheduler: Submitting 57 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at collect at Trip.scala:35) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+2024-04-26 12:12:46,199 INFO scheduler.TaskSchedulerImpl: Adding task set 0.0 with 57 tasks resource profile 0
+2024-04-26 12:12:46,236 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0) (10.22.4.12, executor 16, partition 0, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,238 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1) (10.22.4.42, executor 3, partition 1, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,239 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2) (10.22.4.12, executor 10, partition 2, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,239 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 0.0 (TID 3) (10.22.4.12, executor 18, partition 3, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,239 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 0.0 (TID 4) (10.22.4.12, executor 13, partition 4, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,239 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 0.0 (TID 5) (10.22.4.12, executor 12, partition 5, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,240 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 0.0 (TID 6) (10.22.4.42, executor 7, partition 6, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,240 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 0.0 (TID 7) (10.22.4.12, executor 11, partition 7, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,241 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 0.0 (TID 8) (10.22.4.42, executor 1, partition 8, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,241 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 0.0 (TID 9) (10.22.4.42, executor 9, partition 9, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,241 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 0.0 (TID 10) (10.22.4.12, executor 17, partition 10, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,241 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 0.0 (TID 11) (10.22.4.42, executor 8, partition 11, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,242 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 0.0 (TID 12) (10.22.4.12, executor 15, partition 12, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,242 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 0.0 (TID 13) (10.22.4.42, executor 0, partition 13, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,242 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 0.0 (TID 14) (10.22.4.12, executor 14, partition 14, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,243 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 0.0 (TID 15) (10.22.4.42, executor 2, partition 15, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,243 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 0.0 (TID 16) (10.22.4.42, executor 6, partition 16, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,243 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 0.0 (TID 17) (10.22.4.42, executor 4, partition 17, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,243 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 0.0 (TID 18) (10.22.4.42, executor 5, partition 18, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,244 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 0.0 (TID 19) (10.22.4.12, executor 19, partition 19, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,244 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 0.0 (TID 20) (10.22.4.12, executor 16, partition 20, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,244 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 0.0 (TID 21) (10.22.4.42, executor 3, partition 21, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,244 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 0.0 (TID 22) (10.22.4.12, executor 10, partition 22, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,244 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 0.0 (TID 23) (10.22.4.12, executor 18, partition 23, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,245 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 0.0 (TID 24) (10.22.4.12, executor 13, partition 24, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,245 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 0.0 (TID 25) (10.22.4.12, executor 12, partition 25, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,245 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 0.0 (TID 26) (10.22.4.42, executor 7, partition 26, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,245 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 0.0 (TID 27) (10.22.4.12, executor 11, partition 27, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,246 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 0.0 (TID 28) (10.22.4.42, executor 1, partition 28, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,246 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 0.0 (TID 29) (10.22.4.42, executor 9, partition 29, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,246 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 0.0 (TID 30) (10.22.4.12, executor 17, partition 30, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,246 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 0.0 (TID 31) (10.22.4.42, executor 8, partition 31, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,247 INFO scheduler.TaskSetManager: Starting task 32.0 in stage 0.0 (TID 32) (10.22.4.12, executor 15, partition 32, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,247 INFO scheduler.TaskSetManager: Starting task 33.0 in stage 0.0 (TID 33) (10.22.4.42, executor 0, partition 33, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,247 INFO scheduler.TaskSetManager: Starting task 34.0 in stage 0.0 (TID 34) (10.22.4.12, executor 14, partition 34, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,247 INFO scheduler.TaskSetManager: Starting task 35.0 in stage 0.0 (TID 35) (10.22.4.42, executor 2, partition 35, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,247 INFO scheduler.TaskSetManager: Starting task 36.0 in stage 0.0 (TID 36) (10.22.4.42, executor 6, partition 36, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,248 INFO scheduler.TaskSetManager: Starting task 37.0 in stage 0.0 (TID 37) (10.22.4.42, executor 4, partition 37, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,248 INFO scheduler.TaskSetManager: Starting task 38.0 in stage 0.0 (TID 38) (10.22.4.42, executor 5, partition 38, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,248 INFO scheduler.TaskSetManager: Starting task 39.0 in stage 0.0 (TID 39) (10.22.4.12, executor 19, partition 39, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,248 INFO scheduler.TaskSetManager: Starting task 40.0 in stage 0.0 (TID 40) (10.22.4.12, executor 16, partition 40, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,248 INFO scheduler.TaskSetManager: Starting task 41.0 in stage 0.0 (TID 41) (10.22.4.42, executor 3, partition 41, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,249 INFO scheduler.TaskSetManager: Starting task 42.0 in stage 0.0 (TID 42) (10.22.4.12, executor 10, partition 42, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,249 INFO scheduler.TaskSetManager: Starting task 43.0 in stage 0.0 (TID 43) (10.22.4.12, executor 18, partition 43, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,249 INFO scheduler.TaskSetManager: Starting task 44.0 in stage 0.0 (TID 44) (10.22.4.12, executor 13, partition 44, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,250 INFO scheduler.TaskSetManager: Starting task 45.0 in stage 0.0 (TID 45) (10.22.4.12, executor 12, partition 45, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,250 INFO scheduler.TaskSetManager: Starting task 46.0 in stage 0.0 (TID 46) (10.22.4.42, executor 7, partition 46, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,250 INFO scheduler.TaskSetManager: Starting task 47.0 in stage 0.0 (TID 47) (10.22.4.12, executor 11, partition 47, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,250 INFO scheduler.TaskSetManager: Starting task 48.0 in stage 0.0 (TID 48) (10.22.4.42, executor 1, partition 48, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,251 INFO scheduler.TaskSetManager: Starting task 49.0 in stage 0.0 (TID 49) (10.22.4.42, executor 9, partition 49, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,251 INFO scheduler.TaskSetManager: Starting task 50.0 in stage 0.0 (TID 50) (10.22.4.12, executor 17, partition 50, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,251 INFO scheduler.TaskSetManager: Starting task 51.0 in stage 0.0 (TID 51) (10.22.4.42, executor 8, partition 51, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,251 INFO scheduler.TaskSetManager: Starting task 52.0 in stage 0.0 (TID 52) (10.22.4.12, executor 15, partition 52, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,252 INFO scheduler.TaskSetManager: Starting task 53.0 in stage 0.0 (TID 53) (10.22.4.42, executor 0, partition 53, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,252 INFO scheduler.TaskSetManager: Starting task 54.0 in stage 0.0 (TID 54) (10.22.4.12, executor 14, partition 54, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,252 INFO scheduler.TaskSetManager: Starting task 55.0 in stage 0.0 (TID 55) (10.22.4.42, executor 2, partition 55, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,252 INFO scheduler.TaskSetManager: Starting task 56.0 in stage 0.0 (TID 56) (10.22.4.42, executor 6, partition 56, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:46,454 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:34039 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,455 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:46033 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,455 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:47007 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,455 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:39553 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,455 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:33397 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,456 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:44557 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,456 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:42131 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,456 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:44831 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,457 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:37049 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,457 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:45299 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,457 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:45809 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,457 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:40163 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,458 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:37375 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,458 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:43151 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,458 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:33411 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,458 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:46359 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,459 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:46847 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,459 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.12:34495 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,463 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:34109 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:46,463 INFO storage.BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.22.4.42:38771 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,002 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:46359 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,016 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:34039 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,029 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:37049 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,059 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:34109 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,059 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:39553 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,060 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:46033 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,060 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:44557 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,060 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:44831 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,061 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:45809 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,065 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:34495 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,073 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:40163 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,085 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:33397 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,087 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:45299 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,087 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:47007 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,087 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:43151 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,088 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:33411 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,089 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:37375 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,089 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:38771 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,092 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.12:46847 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:47,116 INFO storage.BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.22.4.42:42131 (size: 32.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:49,024 INFO scheduler.TaskSetManager: Finished task 41.0 in stage 0.0 (TID 41) in 2775 ms on 10.22.4.42 (executor 3) (1/57)
+2024-04-26 12:12:49,026 INFO scheduler.TaskSetManager: Finished task 56.0 in stage 0.0 (TID 56) in 2774 ms on 10.22.4.42 (executor 6) (2/57)
+2024-04-26 12:12:49,532 INFO scheduler.TaskSetManager: Finished task 39.0 in stage 0.0 (TID 39) in 3284 ms on 10.22.4.12 (executor 19) (3/57)
+2024-04-26 12:12:49,533 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 0.0 (TID 19) in 3289 ms on 10.22.4.12 (executor 19) (4/57)
+2024-04-26 12:12:49,589 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 0.0 (TID 27) in 3344 ms on 10.22.4.12 (executor 11) (5/57)
+2024-04-26 12:12:49,618 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 0.0 (TID 14) in 3376 ms on 10.22.4.12 (executor 14) (6/57)
+2024-04-26 12:12:49,674 INFO scheduler.TaskSetManager: Finished task 42.0 in stage 0.0 (TID 42) in 3425 ms on 10.22.4.12 (executor 10) (7/57)
+2024-04-26 12:12:49,674 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 0.0 (TID 22) in 3430 ms on 10.22.4.12 (executor 10) (8/57)
+2024-04-26 12:12:49,675 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 3436 ms on 10.22.4.12 (executor 10) (9/57)
+2024-04-26 12:12:49,693 INFO scheduler.TaskSetManager: Finished task 50.0 in stage 0.0 (TID 50) in 3441 ms on 10.22.4.12 (executor 17) (10/57)
+2024-04-26 12:12:49,693 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 0.0 (TID 30) in 3447 ms on 10.22.4.12 (executor 17) (11/57)
+2024-04-26 12:12:49,693 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 0.0 (TID 10) in 3452 ms on 10.22.4.12 (executor 17) (12/57)
+2024-04-26 12:12:49,767 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 0.0 (TID 17) in 3524 ms on 10.22.4.42 (executor 4) (13/57)
+2024-04-26 12:12:49,785 INFO scheduler.TaskSetManager: Finished task 37.0 in stage 0.0 (TID 37) in 3537 ms on 10.22.4.42 (executor 4) (14/57)
+2024-04-26 12:12:49,830 INFO scheduler.TaskSetManager: Finished task 52.0 in stage 0.0 (TID 52) in 3579 ms on 10.22.4.12 (executor 15) (15/57)
+2024-04-26 12:12:49,831 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 0.0 (TID 12) in 3590 ms on 10.22.4.12 (executor 15) (16/57)
+2024-04-26 12:12:49,831 INFO scheduler.TaskSetManager: Finished task 32.0 in stage 0.0 (TID 32) in 3585 ms on 10.22.4.12 (executor 15) (17/57)
+2024-04-26 12:12:49,848 INFO scheduler.TaskSetManager: Finished task 51.0 in stage 0.0 (TID 51) in 3597 ms on 10.22.4.42 (executor 8) (18/57)
+2024-04-26 12:12:49,848 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 0.0 (TID 31) in 3602 ms on 10.22.4.42 (executor 8) (19/57)
+2024-04-26 12:12:49,848 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 0.0 (TID 11) in 3607 ms on 10.22.4.42 (executor 8) (20/57)
+2024-04-26 12:12:49,850 INFO scheduler.TaskSetManager: Finished task 38.0 in stage 0.0 (TID 38) in 3602 ms on 10.22.4.42 (executor 5) (21/57)
+2024-04-26 12:12:49,850 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 0.0 (TID 18) in 3607 ms on 10.22.4.42 (executor 5) (22/57)
+2024-04-26 12:12:49,856 INFO scheduler.TaskSetManager: Finished task 54.0 in stage 0.0 (TID 54) in 3604 ms on 10.22.4.12 (executor 14) (23/57)
+2024-04-26 12:12:49,858 INFO scheduler.TaskSetManager: Finished task 34.0 in stage 0.0 (TID 34) in 3611 ms on 10.22.4.12 (executor 14) (24/57)
+2024-04-26 12:12:49,861 INFO scheduler.TaskSetManager: Finished task 40.0 in stage 0.0 (TID 40) in 3613 ms on 10.22.4.12 (executor 16) (25/57)
+2024-04-26 12:12:49,861 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 3638 ms on 10.22.4.12 (executor 16) (26/57)
+2024-04-26 12:12:49,867 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 0.0 (TID 15) in 3625 ms on 10.22.4.42 (executor 2) (27/57)
+2024-04-26 12:12:49,867 INFO scheduler.TaskSetManager: Finished task 35.0 in stage 0.0 (TID 35) in 3620 ms on 10.22.4.42 (executor 2) (28/57)
+2024-04-26 12:12:49,867 INFO scheduler.TaskSetManager: Finished task 55.0 in stage 0.0 (TID 55) in 3615 ms on 10.22.4.42 (executor 2) (29/57)
+2024-04-26 12:12:49,915 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 0.0 (TID 28) in 3670 ms on 10.22.4.42 (executor 1) (30/57)
+2024-04-26 12:12:49,915 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 0.0 (TID 8) in 3674 ms on 10.22.4.42 (executor 1) (31/57)
+2024-04-26 12:12:49,933 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 0.0 (TID 23) in 3689 ms on 10.22.4.12 (executor 18) (32/57)
+2024-04-26 12:12:49,933 INFO scheduler.TaskSetManager: Finished task 43.0 in stage 0.0 (TID 43) in 3684 ms on 10.22.4.12 (executor 18) (33/57)
+2024-04-26 12:12:49,940 INFO scheduler.TaskSetManager: Finished task 53.0 in stage 0.0 (TID 53) in 3689 ms on 10.22.4.42 (executor 0) (34/57)
+2024-04-26 12:12:49,941 INFO scheduler.TaskSetManager: Finished task 33.0 in stage 0.0 (TID 33) in 3694 ms on 10.22.4.42 (executor 0) (35/57)
+2024-04-26 12:12:49,943 INFO scheduler.TaskSetManager: Finished task 48.0 in stage 0.0 (TID 48) in 3693 ms on 10.22.4.42 (executor 1) (36/57)
+2024-04-26 12:12:49,944 INFO scheduler.TaskSetManager: Finished task 36.0 in stage 0.0 (TID 36) in 3697 ms on 10.22.4.42 (executor 6) (37/57)
+2024-04-26 12:12:49,953 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 0.0 (TID 16) in 3710 ms on 10.22.4.42 (executor 6) (38/57)
+2024-04-26 12:12:49,954 INFO scheduler.TaskSetManager: Finished task 45.0 in stage 0.0 (TID 45) in 3705 ms on 10.22.4.12 (executor 12) (39/57)
+2024-04-26 12:12:49,954 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 0.0 (TID 5) in 3715 ms on 10.22.4.12 (executor 12) (40/57)
+2024-04-26 12:12:49,969 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 0.0 (TID 29) in 3723 ms on 10.22.4.42 (executor 9) (41/57)
+2024-04-26 12:12:49,971 INFO scheduler.TaskSetManager: Finished task 47.0 in stage 0.0 (TID 47) in 3721 ms on 10.22.4.12 (executor 11) (42/57)
+2024-04-26 12:12:49,980 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 0.0 (TID 13) in 3738 ms on 10.22.4.42 (executor 0) (43/57)
+2024-04-26 12:12:49,982 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 0.0 (TID 7) in 3742 ms on 10.22.4.12 (executor 11) (44/57)
+2024-04-26 12:12:49,988 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 0.0 (TID 25) in 3743 ms on 10.22.4.12 (executor 12) (45/57)
+2024-04-26 12:12:49,988 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 0.0 (TID 6) in 3749 ms on 10.22.4.42 (executor 7) (46/57)
+2024-04-26 12:12:49,992 INFO scheduler.TaskSetManager: Finished task 49.0 in stage 0.0 (TID 49) in 3742 ms on 10.22.4.42 (executor 9) (47/57)
+2024-04-26 12:12:50,015 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 3777 ms on 10.22.4.42 (executor 3) (48/57)
+2024-04-26 12:12:50,017 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 0.0 (TID 21) in 3773 ms on 10.22.4.42 (executor 3) (49/57)
+2024-04-26 12:12:50,028 INFO scheduler.TaskSetManager: Finished task 46.0 in stage 0.0 (TID 46) in 3777 ms on 10.22.4.42 (executor 7) (50/57)
+2024-04-26 12:12:50,031 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 0.0 (TID 20) in 3787 ms on 10.22.4.12 (executor 16) (51/57)
+2024-04-26 12:12:50,042 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 0.0 (TID 4) in 3803 ms on 10.22.4.12 (executor 13) (52/57)
+2024-04-26 12:12:50,043 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 0.0 (TID 24) in 3798 ms on 10.22.4.12 (executor 13) (53/57)
+2024-04-26 12:12:50,043 INFO scheduler.TaskSetManager: Finished task 44.0 in stage 0.0 (TID 44) in 3794 ms on 10.22.4.12 (executor 13) (54/57)
+2024-04-26 12:12:50,072 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 0.0 (TID 26) in 3827 ms on 10.22.4.42 (executor 7) (55/57)
+2024-04-26 12:12:50,078 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 0.0 (TID 9) in 3837 ms on 10.22.4.42 (executor 9) (56/57)
+2024-04-26 12:12:50,095 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 0.0 (TID 3) in 3856 ms on 10.22.4.12 (executor 18) (57/57)
+2024-04-26 12:12:50,096 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:50,098 INFO scheduler.DAGScheduler: ShuffleMapStage 0 (collect at Trip.scala:35) finished in 3.934 s
+2024-04-26 12:12:50,098 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2024-04-26 12:12:50,098 INFO scheduler.DAGScheduler: running: Set()
+2024-04-26 12:12:50,098 INFO scheduler.DAGScheduler: waiting: Set()
+2024-04-26 12:12:50,099 INFO scheduler.DAGScheduler: failed: Set()
+2024-04-26 12:12:50,119 INFO adaptive.ShufflePartitionsUtil: For shuffle(0), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+2024-04-26 12:12:50,138 INFO aggregate.HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+2024-04-26 12:12:50,164 INFO codegen.CodeGenerator: Code generated in 18.419601 ms
+2024-04-26 12:12:50,204 INFO codegen.CodeGenerator: Code generated in 12.910201 ms
+2024-04-26 12:12:50,234 INFO spark.SparkContext: Starting job: collect at Trip.scala:35
+2024-04-26 12:12:50,237 INFO scheduler.DAGScheduler: Got job 1 (collect at Trip.scala:35) with 1 output partitions
+2024-04-26 12:12:50,238 INFO scheduler.DAGScheduler: Final stage: ResultStage 2 (collect at Trip.scala:35)
+2024-04-26 12:12:50,238 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 1)
+2024-04-26 12:12:50,238 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:50,240 INFO scheduler.DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[10] at collect at Trip.scala:35), which has no missing parents
+2024-04-26 12:12:50,256 INFO memory.MemoryStore: Block broadcast_2 stored as values in memory (estimated size 40.8 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,258 INFO memory.MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 19.5 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,258 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 19.5 KiB, free: 14.2 GiB)
+2024-04-26 12:12:50,259 INFO spark.SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:50,261 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (MapPartitionsRDD[10] at collect at Trip.scala:35) (first 15 tasks are for partitions Vector(0))
+2024-04-26 12:12:50,261 INFO scheduler.TaskSchedulerImpl: Adding task set 2.0 with 1 tasks resource profile 0
+2024-04-26 12:12:50,265 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 2.0 (TID 57) (10.22.4.12, executor 10, partition 0, NODE_LOCAL, 4457 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:50,296 INFO storage.BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.22.4.12:43151 (size: 19.5 KiB, free: 14.2 GiB)
+2024-04-26 12:12:50,344 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.4.12:54836
+2024-04-26 12:12:50,549 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 2.0 (TID 57) in 286 ms on 10.22.4.12 (executor 10) (1/1)
+2024-04-26 12:12:50,549 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:50,550 INFO scheduler.DAGScheduler: ResultStage 2 (collect at Trip.scala:35) finished in 0.296 s
+2024-04-26 12:12:50,551 INFO scheduler.DAGScheduler: Job 1 is finished. Cancelling potential speculative or zombie tasks for this job
+2024-04-26 12:12:50,551 INFO scheduler.TaskSchedulerImpl: Killing all running tasks in stage 2: Stage finished
+2024-04-26 12:12:50,552 INFO scheduler.DAGScheduler: Job 1 finished: collect at Trip.scala:35, took 0.316975 s
+2024-04-26 12:12:50,564 INFO scheduler.DAGScheduler: Registering RDD 11 (collect at Trip.scala:35) as input to shuffle 1
+2024-04-26 12:12:50,565 INFO scheduler.DAGScheduler: Got map stage job 2 (collect at Trip.scala:35) with 1 output partitions
+2024-04-26 12:12:50,565 INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 4 (collect at Trip.scala:35)
+2024-04-26 12:12:50,565 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 3)
+2024-04-26 12:12:50,565 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:50,566 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 4 (MapPartitionsRDD[11] at collect at Trip.scala:35), which has no missing parents
+2024-04-26 12:12:50,579 INFO memory.MemoryStore: Block broadcast_3 stored as values in memory (estimated size 46.7 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,580 INFO memory.MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 21.0 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,581 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 21.0 KiB, free: 14.2 GiB)
+2024-04-26 12:12:50,581 INFO spark.SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:50,582 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ShuffleMapStage 4 (MapPartitionsRDD[11] at collect at Trip.scala:35) (first 15 tasks are for partitions Vector(0))
+2024-04-26 12:12:50,582 INFO scheduler.TaskSchedulerImpl: Adding task set 4.0 with 1 tasks resource profile 0
+2024-04-26 12:12:50,583 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 4.0 (TID 58) (10.22.4.12, executor 12, partition 0, NODE_LOCAL, 4446 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:50,612 INFO storage.BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.22.4.12:37375 (size: 21.0 KiB, free: 14.2 GiB)
+2024-04-26 12:12:50,668 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 10.22.4.12:54856
+2024-04-26 12:12:50,893 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 4.0 (TID 58) in 310 ms on 10.22.4.12 (executor 12) (1/1)
+2024-04-26 12:12:50,893 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:50,894 INFO scheduler.DAGScheduler: ShuffleMapStage 4 (collect at Trip.scala:35) finished in 0.323 s
+2024-04-26 12:12:50,894 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2024-04-26 12:12:50,894 INFO scheduler.DAGScheduler: running: Set()
+2024-04-26 12:12:50,894 INFO scheduler.DAGScheduler: waiting: Set()
+2024-04-26 12:12:50,894 INFO scheduler.DAGScheduler: failed: Set()
+2024-04-26 12:12:50,898 INFO adaptive.ShufflePartitionsUtil: For shuffle(1), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+2024-04-26 12:12:50,918 INFO codegen.CodeGenerator: Code generated in 9.062794 ms
+2024-04-26 12:12:50,938 INFO spark.SparkContext: Starting job: collect at Trip.scala:35
+2024-04-26 12:12:50,939 INFO scheduler.DAGScheduler: Got job 3 (collect at Trip.scala:35) with 1 output partitions
+2024-04-26 12:12:50,939 INFO scheduler.DAGScheduler: Final stage: ResultStage 7 (collect at Trip.scala:35)
+2024-04-26 12:12:50,939 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 6)
+2024-04-26 12:12:50,939 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:50,940 INFO scheduler.DAGScheduler: Submitting ResultStage 7 (MapPartitionsRDD[14] at collect at Trip.scala:35), which has no missing parents
+2024-04-26 12:12:50,945 INFO memory.MemoryStore: Block broadcast_4 stored as values in memory (estimated size 37.2 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,947 INFO memory.MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 17.9 KiB, free 14.2 GiB)
+2024-04-26 12:12:50,947 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:50,948 INFO spark.SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:50,948 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (MapPartitionsRDD[14] at collect at Trip.scala:35) (first 15 tasks are for partitions Vector(0))
+2024-04-26 12:12:50,948 INFO scheduler.TaskSchedulerImpl: Adding task set 7.0 with 1 tasks resource profile 0
+2024-04-26 12:12:50,950 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 7.0 (TID 59) (10.22.4.12, executor 11, partition 0, NODE_LOCAL, 4457 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:50,979 INFO storage.BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.22.4.12:45299 (size: 17.9 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,019 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 10.22.4.12:54826
+2024-04-26 12:12:51,131 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 7.0 (TID 59) in 181 ms on 10.22.4.12 (executor 11) (1/1)
+2024-04-26 12:12:51,131 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:51,131 INFO scheduler.DAGScheduler: ResultStage 7 (collect at Trip.scala:35) finished in 0.187 s
+2024-04-26 12:12:51,131 INFO scheduler.DAGScheduler: Job 3 is finished. Cancelling potential speculative or zombie tasks for this job
+2024-04-26 12:12:51,131 INFO scheduler.TaskSchedulerImpl: Killing all running tasks in stage 7: Stage finished
+2024-04-26 12:12:51,132 INFO scheduler.DAGScheduler: Job 3 finished: collect at Trip.scala:35, took 0.193906 s
+2024-04-26 12:12:51,152 INFO codegen.CodeGenerator: Code generated in 7.963903 ms
+2024-04-26 12:12:51,221 INFO scheduler.DAGScheduler: Registering RDD 17 (show at Trip.scala:36) as input to shuffle 2
+2024-04-26 12:12:51,222 INFO scheduler.DAGScheduler: Got map stage job 4 (show at Trip.scala:36) with 57 output partitions
+2024-04-26 12:12:51,222 INFO scheduler.DAGScheduler: Final stage: ShuffleMapStage 8 (show at Trip.scala:36)
+2024-04-26 12:12:51,222 INFO scheduler.DAGScheduler: Parents of final stage: List()
+2024-04-26 12:12:51,222 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:51,223 INFO scheduler.DAGScheduler: Submitting ShuffleMapStage 8 (MapPartitionsRDD[17] at show at Trip.scala:36), which has no missing parents
+2024-04-26 12:12:51,229 INFO memory.MemoryStore: Block broadcast_5 stored as values in memory (estimated size 39.4 KiB, free 14.2 GiB)
+2024-04-26 12:12:51,231 INFO memory.MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 18.1 KiB, free 14.2 GiB)
+2024-04-26 12:12:51,231 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,232 INFO spark.SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:51,233 INFO scheduler.DAGScheduler: Submitting 57 missing tasks from ShuffleMapStage 8 (MapPartitionsRDD[17] at show at Trip.scala:36) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14))
+2024-04-26 12:12:51,233 INFO scheduler.TaskSchedulerImpl: Adding task set 8.0 with 57 tasks resource profile 0
+2024-04-26 12:12:51,234 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 8.0 (TID 60) (10.22.4.42, executor 9, partition 0, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 1.0 in stage 8.0 (TID 61) (10.22.4.12, executor 19, partition 1, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 2.0 in stage 8.0 (TID 62) (10.22.4.42, executor 2, partition 2, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 3.0 in stage 8.0 (TID 63) (10.22.4.42, executor 4, partition 3, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 4.0 in stage 8.0 (TID 64) (10.22.4.12, executor 15, partition 4, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 5.0 in stage 8.0 (TID 65) (10.22.4.42, executor 1, partition 5, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 6.0 in stage 8.0 (TID 66) (10.22.4.42, executor 3, partition 6, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,235 INFO scheduler.TaskSetManager: Starting task 7.0 in stage 8.0 (TID 67) (10.22.4.12, executor 18, partition 7, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 8.0 in stage 8.0 (TID 68) (10.22.4.42, executor 8, partition 8, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 9.0 in stage 8.0 (TID 69) (10.22.4.12, executor 13, partition 9, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 10.0 in stage 8.0 (TID 70) (10.22.4.42, executor 6, partition 10, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 11.0 in stage 8.0 (TID 71) (10.22.4.42, executor 5, partition 11, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 12.0 in stage 8.0 (TID 72) (10.22.4.12, executor 10, partition 12, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 13.0 in stage 8.0 (TID 73) (10.22.4.12, executor 11, partition 13, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 14.0 in stage 8.0 (TID 74) (10.22.4.12, executor 14, partition 14, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,236 INFO scheduler.TaskSetManager: Starting task 15.0 in stage 8.0 (TID 75) (10.22.4.12, executor 16, partition 15, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 16.0 in stage 8.0 (TID 76) (10.22.4.12, executor 12, partition 16, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 17.0 in stage 8.0 (TID 77) (10.22.4.12, executor 17, partition 17, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 18.0 in stage 8.0 (TID 78) (10.22.4.42, executor 0, partition 18, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 19.0 in stage 8.0 (TID 79) (10.22.4.42, executor 7, partition 19, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 20.0 in stage 8.0 (TID 80) (10.22.4.42, executor 9, partition 20, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 21.0 in stage 8.0 (TID 81) (10.22.4.12, executor 19, partition 21, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 22.0 in stage 8.0 (TID 82) (10.22.4.42, executor 2, partition 22, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 23.0 in stage 8.0 (TID 83) (10.22.4.42, executor 4, partition 23, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,237 INFO scheduler.TaskSetManager: Starting task 24.0 in stage 8.0 (TID 84) (10.22.4.12, executor 15, partition 24, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 25.0 in stage 8.0 (TID 85) (10.22.4.42, executor 1, partition 25, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 26.0 in stage 8.0 (TID 86) (10.22.4.42, executor 3, partition 26, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 27.0 in stage 8.0 (TID 87) (10.22.4.12, executor 18, partition 27, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 28.0 in stage 8.0 (TID 88) (10.22.4.42, executor 8, partition 28, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 29.0 in stage 8.0 (TID 89) (10.22.4.12, executor 13, partition 29, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 30.0 in stage 8.0 (TID 90) (10.22.4.42, executor 6, partition 30, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,238 INFO scheduler.TaskSetManager: Starting task 31.0 in stage 8.0 (TID 91) (10.22.4.42, executor 5, partition 31, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 32.0 in stage 8.0 (TID 92) (10.22.4.12, executor 10, partition 32, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 33.0 in stage 8.0 (TID 93) (10.22.4.12, executor 11, partition 33, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 34.0 in stage 8.0 (TID 94) (10.22.4.12, executor 14, partition 34, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 35.0 in stage 8.0 (TID 95) (10.22.4.12, executor 16, partition 35, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 36.0 in stage 8.0 (TID 96) (10.22.4.12, executor 12, partition 36, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 37.0 in stage 8.0 (TID 97) (10.22.4.12, executor 17, partition 37, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 38.0 in stage 8.0 (TID 98) (10.22.4.42, executor 0, partition 38, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 39.0 in stage 8.0 (TID 99) (10.22.4.42, executor 7, partition 39, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,239 INFO scheduler.TaskSetManager: Starting task 40.0 in stage 8.0 (TID 100) (10.22.4.42, executor 9, partition 40, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 41.0 in stage 8.0 (TID 101) (10.22.4.12, executor 19, partition 41, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 42.0 in stage 8.0 (TID 102) (10.22.4.42, executor 2, partition 42, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 43.0 in stage 8.0 (TID 103) (10.22.4.42, executor 4, partition 43, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 44.0 in stage 8.0 (TID 104) (10.22.4.12, executor 15, partition 44, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 45.0 in stage 8.0 (TID 105) (10.22.4.42, executor 1, partition 45, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 46.0 in stage 8.0 (TID 106) (10.22.4.42, executor 3, partition 46, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 47.0 in stage 8.0 (TID 107) (10.22.4.12, executor 18, partition 47, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 48.0 in stage 8.0 (TID 108) (10.22.4.42, executor 8, partition 48, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,240 INFO scheduler.TaskSetManager: Starting task 49.0 in stage 8.0 (TID 109) (10.22.4.12, executor 13, partition 49, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 50.0 in stage 8.0 (TID 110) (10.22.4.42, executor 6, partition 50, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 51.0 in stage 8.0 (TID 111) (10.22.4.42, executor 5, partition 51, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 52.0 in stage 8.0 (TID 112) (10.22.4.12, executor 10, partition 52, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 53.0 in stage 8.0 (TID 113) (10.22.4.12, executor 11, partition 53, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 54.0 in stage 8.0 (TID 114) (10.22.4.12, executor 14, partition 54, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 55.0 in stage 8.0 (TID 115) (10.22.4.12, executor 16, partition 55, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,241 INFO scheduler.TaskSetManager: Starting task 56.0 in stage 8.0 (TID 116) (10.22.4.12, executor 12, partition 56, ANY, 4543 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:51,254 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:45299 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,256 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:43151 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,256 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:37375 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,272 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:44831 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,288 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:39553 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,288 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:42131 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,289 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:37049 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,289 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:46359 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,289 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:34039 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,289 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:33411 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,290 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:33397 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,290 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:34495 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,290 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:47007 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,290 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:38771 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,291 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:40163 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,291 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:45809 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,291 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:46033 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,291 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.12:46847 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,291 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:44557 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,292 INFO storage.BlockManagerInfo: Added broadcast_5_piece0 in memory on 10.22.4.42:34109 (size: 18.1 KiB, free: 14.2 GiB)
+2024-04-26 12:12:51,706 INFO scheduler.TaskSetManager: Finished task 41.0 in stage 8.0 (TID 101) in 466 ms on 10.22.4.12 (executor 19) (1/57)
+2024-04-26 12:12:51,715 INFO scheduler.TaskSetManager: Finished task 56.0 in stage 8.0 (TID 116) in 474 ms on 10.22.4.12 (executor 12) (2/57)
+2024-04-26 12:12:52,428 INFO scheduler.TaskSetManager: Finished task 53.0 in stage 8.0 (TID 113) in 1187 ms on 10.22.4.12 (executor 11) (3/57)
+2024-04-26 12:12:52,430 INFO scheduler.TaskSetManager: Finished task 14.0 in stage 8.0 (TID 74) in 1194 ms on 10.22.4.12 (executor 14) (4/57)
+2024-04-26 12:12:52,444 INFO scheduler.TaskSetManager: Finished task 13.0 in stage 8.0 (TID 73) in 1208 ms on 10.22.4.12 (executor 11) (5/57)
+2024-04-26 12:12:52,472 INFO scheduler.TaskSetManager: Finished task 27.0 in stage 8.0 (TID 87) in 1234 ms on 10.22.4.12 (executor 18) (6/57)
+2024-04-26 12:12:52,493 INFO scheduler.TaskSetManager: Finished task 21.0 in stage 8.0 (TID 81) in 1256 ms on 10.22.4.12 (executor 19) (7/57)
+2024-04-26 12:12:52,497 INFO scheduler.TaskSetManager: Finished task 12.0 in stage 8.0 (TID 72) in 1261 ms on 10.22.4.12 (executor 10) (8/57)
+2024-04-26 12:12:52,499 INFO scheduler.TaskSetManager: Finished task 1.0 in stage 8.0 (TID 61) in 1264 ms on 10.22.4.12 (executor 19) (9/57)
+2024-04-26 12:12:52,508 INFO scheduler.TaskSetManager: Finished task 24.0 in stage 8.0 (TID 84) in 1270 ms on 10.22.4.12 (executor 15) (10/57)
+2024-04-26 12:12:52,512 INFO scheduler.TaskSetManager: Finished task 4.0 in stage 8.0 (TID 64) in 1277 ms on 10.22.4.12 (executor 15) (11/57)
+2024-04-26 12:12:52,517 INFO scheduler.TaskSetManager: Finished task 44.0 in stage 8.0 (TID 104) in 1277 ms on 10.22.4.12 (executor 15) (12/57)
+2024-04-26 12:12:52,523 INFO scheduler.TaskSetManager: Finished task 52.0 in stage 8.0 (TID 112) in 1282 ms on 10.22.4.12 (executor 10) (13/57)
+2024-04-26 12:12:52,523 INFO scheduler.TaskSetManager: Finished task 32.0 in stage 8.0 (TID 92) in 1284 ms on 10.22.4.12 (executor 10) (14/57)
+2024-04-26 12:12:52,553 INFO scheduler.TaskSetManager: Finished task 33.0 in stage 8.0 (TID 93) in 1314 ms on 10.22.4.12 (executor 11) (15/57)
+2024-04-26 12:12:52,557 INFO scheduler.TaskSetManager: Finished task 50.0 in stage 8.0 (TID 110) in 1316 ms on 10.22.4.42 (executor 6) (16/57)
+2024-04-26 12:12:52,559 INFO scheduler.TaskSetManager: Finished task 51.0 in stage 8.0 (TID 111) in 1318 ms on 10.22.4.42 (executor 5) (17/57)
+2024-04-26 12:12:52,559 INFO scheduler.TaskSetManager: Finished task 36.0 in stage 8.0 (TID 96) in 1320 ms on 10.22.4.12 (executor 12) (18/57)
+2024-04-26 12:12:52,561 INFO scheduler.TaskSetManager: Finished task 11.0 in stage 8.0 (TID 71) in 1325 ms on 10.22.4.42 (executor 5) (19/57)
+2024-04-26 12:12:52,561 INFO scheduler.TaskSetManager: Finished task 31.0 in stage 8.0 (TID 91) in 1323 ms on 10.22.4.42 (executor 5) (20/57)
+2024-04-26 12:12:52,577 INFO scheduler.TaskSetManager: Finished task 16.0 in stage 8.0 (TID 76) in 1341 ms on 10.22.4.12 (executor 12) (21/57)
+2024-04-26 12:12:52,578 INFO scheduler.TaskSetManager: Finished task 30.0 in stage 8.0 (TID 90) in 1340 ms on 10.22.4.42 (executor 6) (22/57)
+2024-04-26 12:12:52,584 INFO scheduler.TaskSetManager: Finished task 10.0 in stage 8.0 (TID 70) in 1348 ms on 10.22.4.42 (executor 6) (23/57)
+2024-04-26 12:12:52,596 INFO scheduler.TaskSetManager: Finished task 34.0 in stage 8.0 (TID 94) in 1357 ms on 10.22.4.12 (executor 14) (24/57)
+2024-04-26 12:12:52,607 INFO scheduler.TaskSetManager: Finished task 23.0 in stage 8.0 (TID 83) in 1370 ms on 10.22.4.42 (executor 4) (25/57)
+2024-04-26 12:12:52,627 INFO scheduler.TaskSetManager: Finished task 2.0 in stage 8.0 (TID 62) in 1392 ms on 10.22.4.42 (executor 2) (26/57)
+2024-04-26 12:12:52,628 INFO scheduler.TaskSetManager: Finished task 40.0 in stage 8.0 (TID 100) in 1389 ms on 10.22.4.42 (executor 9) (27/57)
+2024-04-26 12:12:52,633 INFO scheduler.TaskSetManager: Finished task 48.0 in stage 8.0 (TID 108) in 1393 ms on 10.22.4.42 (executor 8) (28/57)
+2024-04-26 12:12:52,635 INFO scheduler.TaskSetManager: Finished task 28.0 in stage 8.0 (TID 88) in 1397 ms on 10.22.4.42 (executor 8) (29/57)
+2024-04-26 12:12:52,640 INFO scheduler.TaskSetManager: Finished task 54.0 in stage 8.0 (TID 114) in 1399 ms on 10.22.4.12 (executor 14) (30/57)
+2024-04-26 12:12:52,645 INFO scheduler.TaskSetManager: Finished task 3.0 in stage 8.0 (TID 63) in 1410 ms on 10.22.4.42 (executor 4) (31/57)
+2024-04-26 12:12:52,649 INFO scheduler.TaskSetManager: Finished task 42.0 in stage 8.0 (TID 102) in 1409 ms on 10.22.4.42 (executor 2) (32/57)
+2024-04-26 12:12:52,656 INFO scheduler.TaskSetManager: Finished task 22.0 in stage 8.0 (TID 82) in 1419 ms on 10.22.4.42 (executor 2) (33/57)
+2024-04-26 12:12:52,657 INFO scheduler.TaskSetManager: Finished task 20.0 in stage 8.0 (TID 80) in 1420 ms on 10.22.4.42 (executor 9) (34/57)
+2024-04-26 12:12:52,662 INFO scheduler.TaskSetManager: Finished task 8.0 in stage 8.0 (TID 68) in 1426 ms on 10.22.4.42 (executor 8) (35/57)
+2024-04-26 12:12:52,686 INFO scheduler.TaskSetManager: Finished task 43.0 in stage 8.0 (TID 103) in 1446 ms on 10.22.4.42 (executor 4) (36/57)
+2024-04-26 12:12:52,687 INFO scheduler.TaskSetManager: Finished task 6.0 in stage 8.0 (TID 66) in 1452 ms on 10.22.4.42 (executor 3) (37/57)
+2024-04-26 12:12:52,690 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 8.0 (TID 60) in 1456 ms on 10.22.4.42 (executor 9) (38/57)
+2024-04-26 12:12:52,693 INFO scheduler.TaskSetManager: Finished task 55.0 in stage 8.0 (TID 115) in 1452 ms on 10.22.4.12 (executor 16) (39/57)
+2024-04-26 12:12:52,697 INFO scheduler.TaskSetManager: Finished task 35.0 in stage 8.0 (TID 95) in 1458 ms on 10.22.4.12 (executor 16) (40/57)
+2024-04-26 12:12:52,717 INFO scheduler.TaskSetManager: Finished task 26.0 in stage 8.0 (TID 86) in 1479 ms on 10.22.4.42 (executor 3) (41/57)
+2024-04-26 12:12:52,718 INFO scheduler.TaskSetManager: Finished task 18.0 in stage 8.0 (TID 78) in 1481 ms on 10.22.4.42 (executor 0) (42/57)
+2024-04-26 12:12:52,719 INFO scheduler.TaskSetManager: Finished task 46.0 in stage 8.0 (TID 106) in 1479 ms on 10.22.4.42 (executor 3) (43/57)
+2024-04-26 12:12:52,721 INFO scheduler.TaskSetManager: Finished task 17.0 in stage 8.0 (TID 77) in 1484 ms on 10.22.4.12 (executor 17) (44/57)
+2024-04-26 12:12:52,721 INFO scheduler.TaskSetManager: Finished task 37.0 in stage 8.0 (TID 97) in 1482 ms on 10.22.4.12 (executor 17) (45/57)
+2024-04-26 12:12:52,729 INFO scheduler.TaskSetManager: Finished task 38.0 in stage 8.0 (TID 98) in 1490 ms on 10.22.4.42 (executor 0) (46/57)
+2024-04-26 12:12:52,754 INFO scheduler.TaskSetManager: Finished task 45.0 in stage 8.0 (TID 105) in 1514 ms on 10.22.4.42 (executor 1) (47/57)
+2024-04-26 12:12:52,802 INFO scheduler.TaskSetManager: Finished task 9.0 in stage 8.0 (TID 69) in 1566 ms on 10.22.4.12 (executor 13) (48/57)
+2024-04-26 12:12:52,832 INFO scheduler.TaskSetManager: Finished task 25.0 in stage 8.0 (TID 85) in 1595 ms on 10.22.4.42 (executor 1) (49/57)
+2024-04-26 12:12:52,842 INFO scheduler.TaskSetManager: Finished task 29.0 in stage 8.0 (TID 89) in 1604 ms on 10.22.4.12 (executor 13) (50/57)
+2024-04-26 12:12:52,842 INFO scheduler.TaskSetManager: Finished task 49.0 in stage 8.0 (TID 109) in 1602 ms on 10.22.4.12 (executor 13) (51/57)
+2024-04-26 12:12:52,846 INFO scheduler.TaskSetManager: Finished task 5.0 in stage 8.0 (TID 65) in 1610 ms on 10.22.4.42 (executor 1) (52/57)
+2024-04-26 12:12:52,866 INFO scheduler.TaskSetManager: Finished task 15.0 in stage 8.0 (TID 75) in 1629 ms on 10.22.4.12 (executor 16) (53/57)
+2024-04-26 12:12:52,909 INFO scheduler.TaskSetManager: Finished task 39.0 in stage 8.0 (TID 99) in 1670 ms on 10.22.4.42 (executor 7) (54/57)
+2024-04-26 12:12:52,981 INFO scheduler.TaskSetManager: Finished task 47.0 in stage 8.0 (TID 107) in 1741 ms on 10.22.4.12 (executor 18) (55/57)
+2024-04-26 12:12:53,056 INFO scheduler.TaskSetManager: Finished task 19.0 in stage 8.0 (TID 79) in 1819 ms on 10.22.4.42 (executor 7) (56/57)
+2024-04-26 12:12:53,105 INFO scheduler.TaskSetManager: Finished task 7.0 in stage 8.0 (TID 67) in 1870 ms on 10.22.4.12 (executor 18) (57/57)
+2024-04-26 12:12:53,105 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:53,106 INFO scheduler.DAGScheduler: ShuffleMapStage 8 (show at Trip.scala:36) finished in 1.881 s
+2024-04-26 12:12:53,106 INFO scheduler.DAGScheduler: looking for newly runnable stages
+2024-04-26 12:12:53,106 INFO scheduler.DAGScheduler: running: Set()
+2024-04-26 12:12:53,106 INFO scheduler.DAGScheduler: waiting: Set()
+2024-04-26 12:12:53,106 INFO scheduler.DAGScheduler: failed: Set()
+2024-04-26 12:12:53,109 INFO adaptive.ShufflePartitionsUtil: For shuffle(2), advisory target size: 67108864, actual target size 1048576, minimum partition size: 1048576
+2024-04-26 12:12:53,116 INFO aggregate.HashAggregateExec: spark.sql.codegen.aggregate.map.twolevel.enabled is set to true, but current version of codegened fast hashmap does not support this aggregate.
+2024-04-26 12:12:53,150 INFO spark.SparkContext: Starting job: show at Trip.scala:36
+2024-04-26 12:12:53,156 INFO scheduler.DAGScheduler: Got job 5 (show at Trip.scala:36) with 1 output partitions
+2024-04-26 12:12:53,156 INFO scheduler.DAGScheduler: Final stage: ResultStage 10 (show at Trip.scala:36)
+2024-04-26 12:12:53,156 INFO scheduler.DAGScheduler: Parents of final stage: List(ShuffleMapStage 9)
+2024-04-26 12:12:53,156 INFO scheduler.DAGScheduler: Missing parents: List()
+2024-04-26 12:12:53,158 INFO scheduler.DAGScheduler: Submitting ResultStage 10 (MapPartitionsRDD[21] at show at Trip.scala:36), which has no missing parents
+2024-04-26 12:12:53,178 INFO memory.MemoryStore: Block broadcast_6 stored as values in memory (estimated size 40.3 KiB, free 14.2 GiB)
+2024-04-26 12:12:53,180 INFO memory.MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 19.4 KiB, free 14.2 GiB)
+2024-04-26 12:12:53,181 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on exp-4-12.ib.cluster:35025 (size: 19.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:53,181 INFO spark.SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1478
+2024-04-26 12:12:53,182 INFO scheduler.DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (MapPartitionsRDD[21] at show at Trip.scala:36) (first 15 tasks are for partitions Vector(0))
+2024-04-26 12:12:53,182 INFO scheduler.TaskSchedulerImpl: Adding task set 10.0 with 1 tasks resource profile 0
+2024-04-26 12:12:53,184 INFO scheduler.TaskSetManager: Starting task 0.0 in stage 10.0 (TID 117) (10.22.4.12, executor 16, partition 0, NODE_LOCAL, 4457 bytes) taskResourceAssignments Map()
+2024-04-26 12:12:53,201 INFO storage.BlockManagerInfo: Added broadcast_6_piece0 in memory on 10.22.4.12:33397 (size: 19.4 KiB, free: 14.2 GiB)
+2024-04-26 12:12:53,256 INFO spark.MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 10.22.4.12:54702
+2024-04-26 12:12:53,457 INFO scheduler.TaskSetManager: Finished task 0.0 in stage 10.0 (TID 117) in 274 ms on 10.22.4.12 (executor 16) (1/1)
+2024-04-26 12:12:53,457 INFO scheduler.TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+2024-04-26 12:12:53,458 INFO scheduler.DAGScheduler: ResultStage 10 (show at Trip.scala:36) finished in 0.295 s
+2024-04-26 12:12:53,458 INFO scheduler.DAGScheduler: Job 5 is finished. Cancelling potential speculative or zombie tasks for this job
+2024-04-26 12:12:53,458 INFO scheduler.TaskSchedulerImpl: Killing all running tasks in stage 10: Stage finished
+2024-04-26 12:12:53,458 INFO scheduler.DAGScheduler: Job 5 finished: show at Trip.scala:36, took 0.307399 s
+2024-04-26 12:12:53,474 INFO codegen.CodeGenerator: Code generated in 9.498815 ms
+2024-04-26 12:12:53,485 INFO codegen.CodeGenerator: Code generated in 6.240917 ms
++--------+------------------+
+|distance|               avg|
++--------+------------------+
+|-3390584| 4.300000190734863|
+|       0| 8.716027658803418|
+|       1| 8.588929752755128|
+|       2|12.445617702113038|
+|       3|16.138285531192118|
+|       4|19.526941180964492|
+|       5|25.047612273895428|
+|       6|25.658785742972555|
+|       7|28.687974436628252|
+|       8| 32.61318422082789|
+|       9| 37.46191547494387|
+|      10| 40.91088156729072|
+|      11| 43.89113472168217|
+|      12| 46.13909956107769|
+|      13| 49.48874379166106|
+|      14| 52.92496220992323|
+|      15|56.305745339019964|
+|      16|61.254555811797594|
+|      17| 65.25565655356682|
+|      18| 65.76868764295966|
++--------+------------------+
+only showing top 20 rows
+
+-3390584	4.300
+  0	8.716
+  1	8.589
+  2	12.446
+  3	16.138
+  4	19.527
+  5	25.048
+  6	25.659
+  7	28.688
+  8	32.613
+  9	37.462
+ 10	40.911
+ 11	43.891
+ 12	46.139
+ 13	49.489
+ 14	52.925
+ 15	56.306
+ 16	61.255
+ 17	65.256
+ 18	65.769
+ 19	65.928
+ 20	67.476
+ 21	68.018
+ 22	69.347
+ 23	74.237
+ 24	81.272
+ 25	86.223
+ 26	88.727
+ 27	90.280
+ 28	85.151
+ 29	87.027
+ 30	98.287
+ 31	110.155
+ 32	122.312
+ 33	126.477
+ 34	128.066
+ 35	131.452
+ 36	134.678
+ 37	136.236
+ 38	137.190
+ 39	147.220
+ 40	146.285
+ 41	152.906
+ 42	157.428
+ 43	161.527
+ 44	168.788
+ 45	183.808
+ 46	166.324
+ 47	192.156
+ 48	197.580
+ 49	197.964
+ 50	186.769
+ 51	194.048
+ 52	183.954
+ 53	197.313
+ 54	184.838
+ 55	196.828
+ 56	198.857
+ 57	216.735
+ 58	204.959
+ 59	205.836
+ 60	206.589
+ 61	207.134
+ 62	212.456
+ 63	206.765
+ 64	220.436
+ 65	229.607
+ 66	220.835
+ 67	239.850
+ 68	212.604
+ 69	249.178
+ 70	230.826
+ 71	201.874
+ 72	271.311
+ 73	287.882
+ 74	306.843
+ 75	258.500
+ 76	268.848
+ 77	283.727
+ 78	213.602
+ 79	264.490
+ 80	159.574
+ 81	243.535
+ 82	270.375
+ 83	269.265
+ 84	293.775
+ 85	130.044
+ 86	216.507
+ 87	204.808
+ 88	175.964
+ 89	378.493
+ 90	261.890
+ 91	29.325
+ 92	275.712
+ 93	412.614
+ 94	333.546
+ 95	359.961
+ 96	194.892
+ 97	212.467
+ 98	233.286
+ 99	305.283
+100	53.279
+101	99.727
+102	190.535
+103	348.598
+104	374.816
+105	145.550
+106	303.247
+107	0.300
+108	518.050
+109	8.000
+110	294.895
+111	257.550
+112	166.573
+113	66.970
+114	159.170
+116	333.570
+117	0.810
+118	185.677
+119	442.870
+122	441.885
+123	415.000
+124	192.800
+126	687.840
+127	206.175
+128	161.510
+129	0.800
+130	185.815
+132	54.465
+134	42.595
+135	593.995
+136	261.065
+138	600.300
+140	250.822
+143	284.993
+147	20.580
+148	104.820
+150	82.030
+151	58.340
+152	136.580
+153	-0.487
+154	481.120
+155	64.045
+156	63.360
+157	33.330
+158	45.847
+159	120.460
+160	8.993
+161	320.380
+162	8.630
+163	9.235
+164	52.800
+165	45.203
+166	17.045
+167	92.830
+168	37.328
+169	174.202
+170	30.930
+171	35.042
+172	26.257
+174	64.314
+175	38.248
+176	75.368
+177	293.687
+178	5.630
+179	304.772
+180	46.793
+181	27.878
+182	173.972
+183	23.293
+184	39.769
+185	30.982
+186	60.590
+188	8.630
+189	333.560
+190	70.000
+191	24.327
+192	641.020
+193	64.170
+196	588.800
+197	676.905
+199	16.335
+2024-04-26 12:12:53,506 INFO spark.SparkContext: Invoking stop() from shutdown hook
+2024-04-26 12:12:53,515 INFO server.AbstractConnector: Stopped Spark@38f7611a{HTTP/1.1, (http/1.1)}{exp-4-12.ib.cluster:4040}
+2024-04-26 12:12:53,517 INFO ui.SparkUI: Stopped Spark web UI at http://exp-4-12.ib.cluster:4040
+2024-04-26 12:12:53,522 INFO cluster.StandaloneSchedulerBackend: Shutting down all executors
+2024-04-26 12:12:53,522 INFO cluster.CoarseGrainedSchedulerBackend$DriverEndpoint: Asking each executor to shut down
+2024-04-26 12:12:53,541 INFO spark.MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+2024-04-26 12:12:53,586 INFO memory.MemoryStore: MemoryStore cleared
+2024-04-26 12:12:53,586 INFO storage.BlockManager: BlockManager stopped
+2024-04-26 12:12:53,592 INFO storage.BlockManagerMaster: BlockManagerMaster stopped
+2024-04-26 12:12:53,597 INFO scheduler.OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+2024-04-26 12:12:53,649 INFO spark.SparkContext: Successfully stopped SparkContext
+2024-04-26 12:12:53,649 INFO util.ShutdownHookManager: Shutdown hook called
+2024-04-26 12:12:53,649 INFO util.ShutdownHookManager: Deleting directory /tmp/spark-2171ae7a-80a1-47b4-b9c1-b9578cd57b18
+2024-04-26 12:12:53,671 INFO util.ShutdownHookManager: Deleting directory /scratch/pnisal/job_30142855/spark-a9eb756a-b6d0-45eb-bb10-a57c68a7c8f3
+Copying Hadoop logs back to /home/pnisal/expansecluster/logs...
+'/scratch/pnisal/job_30142855/logs' -> '/home/pnisal/expansecluster/logs'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-namenode-exp-4-12.out' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-namenode-exp-4-12.out'
+'/scratch/pnisal/job_30142855/logs/SecurityAuth-pnisal.audit' -> '/home/pnisal/expansecluster/logs/SecurityAuth-pnisal.audit'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-datanode-exp-4-12.out' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-datanode-exp-4-12.out'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-namenode-exp-4-12.log' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-namenode-exp-4-12.log'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-datanode-exp-4-12.log' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-datanode-exp-4-12.log'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-secondarynamenode-exp-4-12.out' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-secondarynamenode-exp-4-12.out'
+'/scratch/pnisal/job_30142855/logs/hadoop-pnisal-secondarynamenode-exp-4-12.log' -> '/home/pnisal/expansecluster/logs/hadoop-pnisal-secondarynamenode-exp-4-12.log'
+'/scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.master.Master-1-exp-4-12.out' -> '/home/pnisal/expansecluster/logs/spark-pnisal-org.apache.spark.deploy.master.Master-1-exp-4-12.out'
+'/scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-12.out' -> '/home/pnisal/expansecluster/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/tmp/dfs/namesecondary/in_use.lock'
+removed directory '/scratch/pnisal/job_30142855/tmp/dfs/namesecondary'
+removed directory '/scratch/pnisal/job_30142855/tmp/dfs'
+removed directory '/scratch/pnisal/job_30142855/tmp'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/VERSION'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/VERSION'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/rbw'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741864'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741862'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741844'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741851_1027.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741875'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741860_1036.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741879_1055.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741838'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741839'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741869_1045.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741827'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741841'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741834'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741842_1018.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741874_1050.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741843'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741863'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741875_1051.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741846_1022.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741860'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741869'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741871_1047.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741835_1011.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741840'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741880'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741862_1038.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741837'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741855'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741825_1001.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741879'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741872'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741850'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741828'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741855_1031.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741853'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741825'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741876'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741829'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741836_1012.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741845_1021.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741826'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741833_1009.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741864_1040.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741832_1008.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741850_1026.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741828_1004.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741866'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741836'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741863_1039.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741873'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741826_1002.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741856'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741865'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741871'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741854'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741867'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741837_1013.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741878'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741876_1052.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741830_1006.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741870'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741842'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741848'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741847'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741857'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741832'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741874'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741829_1005.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741838_1014.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741861_1037.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741853_1029.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741854_1030.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741834_1010.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741831'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741846'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741856_1032.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741881'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741867_1043.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741852'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741847_1023.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741858'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741851'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741877'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741852_1028.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741861'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741840_1016.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741831_1007.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741865_1041.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741858_1034.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741830'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741844_1020.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741839_1015.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741866_1042.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741857_1033.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741845'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741881_1057.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741833'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741877_1053.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741848_1024.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741841_1017.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741872_1048.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741868_1044.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741859'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741849'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741873_1049.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741878_1054.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741880_1056.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741827_1003.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741868'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741870_1046.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741835'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741843_1019.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741859_1035.meta'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0/blk_1073741849_1025.meta'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0/subdir0'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized/subdir0'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current/finalized'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/current'
+removed '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/scanner.cursor'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745/tmp'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current/BP-247206272-198.202.103.63-1714158717745'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data/current'
+removed '/scratch/pnisal/job_30142855/hdfs_data/in_use.lock'
+removed directory '/scratch/pnisal/job_30142855/hdfs_data'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-namenode-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-secondarynamenode-exp-4-12.log'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-secondarynamenode-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.master.Master-1-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-namenode-exp-4-12.log'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-datanode-exp-4-12.out'
+removed '/scratch/pnisal/job_30142855/logs/hadoop-pnisal-datanode-exp-4-12.log'
+removed '/scratch/pnisal/job_30142855/logs/SecurityAuth-pnisal.audit'
+removed directory '/scratch/pnisal/job_30142855/logs'
+removed '/scratch/pnisal/job_30142855/namenode_data/current/edits_inprogress_0000000000000000001'
+removed '/scratch/pnisal/job_30142855/namenode_data/current/VERSION'
+removed '/scratch/pnisal/job_30142855/namenode_data/current/fsimage_0000000000000000000.md5'
+removed '/scratch/pnisal/job_30142855/namenode_data/current/fsimage_0000000000000000000'
+removed '/scratch/pnisal/job_30142855/namenode_data/current/seen_txid'
+removed directory '/scratch/pnisal/job_30142855/namenode_data/current'
+removed '/scratch/pnisal/job_30142855/namenode_data/in_use.lock'
+removed directory '/scratch/pnisal/job_30142855/namenode_data'
+removed '/scratch/pnisal/job_30142855/pids/hadoop-pnisal-datanode.pid'
+removed '/scratch/pnisal/job_30142855/pids/hadoop-pnisal-namenode.pid'
+removed '/scratch/pnisal/job_30142855/pids/hadoop-pnisal-secondarynamenode.pid'
+removed directory '/scratch/pnisal/job_30142855/pids'
+removed '/scratch/pnisal/job_30142855/logs/spark-pnisal-org.apache.spark.deploy.worker.Worker-1-exp-4-42.out'
+removed directory '/scratch/pnisal/job_30142855/logs'
